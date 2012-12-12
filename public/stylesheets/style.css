@@ -1,0 +1,19 @@
+body {
+  padding: 50px;
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+}
+
+a {
+  color: #00B7FF;
+}
+#trillInput {
+  padding: 10px; 
+  font-size: 26px;
+  text-align: center;
+  width: 650px
+}
+form {
+  margin: 0 auto;
+  width:650px;
+}
+
