@@ -9,5 +9,8 @@
     "express": "3.x",
     "ejs": "*",
     "sass": "*"
+  },
+  "engines": {
+    "node": "6.x"
   }
 }
