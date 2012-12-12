@@ -14,6 +14,10 @@ Javascript.
 
     heroku git:remote -a mysterious-scrubland-7120
     
-### Deploy
+### Deploy:
 
     git push heroku master
+
+### URL:
+
+http://mysterious-scrubland-7120.herokuapp.com 
