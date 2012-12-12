@@ -11,6 +11,6 @@
     "sass": "*"
   },
   "engines": {
-    "node": "6.x"
+    "node": "0.6.x"
   }
 }
