@@ -1,6 +1,7 @@
-
 /**
  * Module dependencies.
+ * 
+ * Balla github inbrowzer editz
  */
 
 var express = require('express')
@@ -9,29 +10,29 @@ var express = require('express')
   , http = require('http')
   , path = require('path');
 
-var app = express();
+var trillho = express();
 
-app.configure(function(){
-  app.set('port', process.env.PORT || 3000);
-  app.set('views', __dirname + '/views');
-  app.set('view engine', 'ejs');
-  app.use(express.favicon());
-  app.use(express.logger('dev'));
-  app.use(express.bodyParser());
-  app.use(express.methodOverride());
-  app.use(express.cookieParser('your secret here'));
-  app.use(express.session());
-  app.use(app.router);
-  app.use(express.static(path.join(__dirname, 'public')));
+trillho.configure(function(){
+  trillho.set('port', process.env.PORT || 3000);
+  trillho.set('views', __dirname + '/views');
+  trillho.set('view engine', 'ejs');
+  trillho.use(express.favicon());
+  trillho.use(express.logger('dev'));
+  trillho.use(express.bodyParser());
+  trillho.use(express.methodOverride());
+  trillho.use(express.cookieParser('your secret here'));
+  trillho.use(express.session());
+  trillho.use(trillho.router);
+  trillho.use(express.static(path.join(__dirname, 'public')));
 });
 
-app.configure('development', function(){
-  app.use(express.errorHandler());
+trillho.configure('development', function(){
+  trillho.use(express.errorHandler());
 });
 
-app.get('/', routes.index);
-app.get('/users', user.list);
+trillho.get('/', routes.index);
+trillho.get('/users', user.list);
 
-http.createServer(app).listen(app.get('port'), function(){
-  console.log("Express server listening on port " + app.get('port'));
+http.createServer(trillho).listen(trillho.get('port'), function(){
+  console.log("Express server listening on port " + trillho.get('port'));
 });
